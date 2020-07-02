@@ -1,6 +1,6 @@
 <app-slider></app-slider>
 
-<app-sidebar *ngIf="isOpenSidebar">
+<app-sidebar [class.is-open]="isOpenSidebar">
   <ng-container sidebar-head>
     <h3>
       {{donationContent.title}}<br>

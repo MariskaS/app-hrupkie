@@ -1,27 +1,15 @@
-# AppHrupkie
+## Description  
+The promotional site for a [Russian charity](https://hrupkie.ru/) 
+**[Live Demo](https://app-hrupkie.herokuapp.com/)** - here is a build version of the test task. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+**Technologies:** 
+[Angular CLI](https://github.com/angular/angular-cli) version 10.0.0, HTML/Scss, 
+Typescript, HTML/Scss, JavaScript.  
 
-## Development server
+**Additional packages:** [ngx-useful-swiper](https://github.com/jaychase/angular2-useful-swiper)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## About
+1. Reusable components `src\app\shared\components`.
+1. Responsive for all components. 
+1. [Heroku](https://www.heroku.com/home) - continuous deployment from github to heroku. 
+(useful link - [grokonez.com](https://grokonez.com/frontend/angular/angular-deployment/how-to-deploy-angular-application-on-heroku-hosting-with-git-repository))
