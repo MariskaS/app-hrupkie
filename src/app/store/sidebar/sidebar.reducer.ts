@@ -4,7 +4,7 @@ import {SidebarActions, sidebarActionsType} from './sidebar.actions';
 export const sidebarNode = 'sidebar';
 
 const initialState: SidebarState = {
-  open: true
+  open: false
 };
 
 export const sidebarReducer = (state = initialState, action: SidebarActions) => {

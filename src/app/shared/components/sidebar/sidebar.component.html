@@ -2,10 +2,12 @@
   <div class="ah-sidebar__head">
     <ng-content select="[sidebar-head]"></ng-content>
   </div>
-  <div class="ah-sidebar__body">
-    <ng-content select="[sidebar-body]"></ng-content>
-  </div>
-  <div class="ah-sidebar__footer">
-    <ng-content select="[sidebar-footer]"></ng-content>
+  <div class="ah-sidebar__scroll">
+    <div class="ah-sidebar__body">
+      <ng-content select="[sidebar-body]"></ng-content>
+    </div>
+    <div class="ah-sidebar__footer">
+      <ng-content select="[sidebar-footer]"></ng-content>
+    </div>
   </div>
 </aside>
