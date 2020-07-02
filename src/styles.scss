@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/swiper/css/swiper.min.css";
+@import'styles/reset';
+@import "styles/variables/variable";
+@import "styles/variables/variable-theme";
+@import'styles/global';
+@import "styles/font";
+@import "styles/typography";

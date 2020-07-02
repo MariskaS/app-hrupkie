@@ -1,0 +1,31 @@
+/**
+* Example:
+* <div class="ah-input-with-icon">
+*    <input type="text"
+*           placeholder="...">
+*   <svg-icon class="ah-svg--rub"
+*             src="assets/sprites/sprite.svg#icon-rub"
+*             viewBox="0 0 17 20"></svg-icon>
+* </div>
+*/
+.ah-input-with-icon {
+  background-color: $input-with-icon-bg;
+  @include flex-align(flex, center, center);
+
+  input {
+    border: 0;
+    height: $input-with-icon-height;
+    width: 100%;
+    padding: $input-with-icon-space;
+    font-size: $input-with-icon-font-size;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      & {
+        width: $input-with-icon-width;
+      }
+    }
+  }
+}

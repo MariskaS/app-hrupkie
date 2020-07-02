@@ -1,0 +1,80 @@
+/**
+* Example:
+* <label for="opt{{idx}}"
+*        class="ah-radio-btn">
+*   <input type="radio" name="rdo" id="opt{{idx}}" style="display: none"/>
+*   <span class="ah-radio-btn__label">{{item.value}}</span>
+* </label>
+*/
+.ah-radio-btn {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  @include flex-align(flex, center, center);
+
+  // To hide double border.
+  margin: -1px 0 0 -1px;
+
+  &__label {
+    flex: 1;
+    @include flex-align(flex, center, center);
+    height: $radio-height;
+
+    border: 1px solid var(--color-grey-light);
+    z-index: 1;
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: color $transition-base, border-bottom-color $transition-base;
+
+        &:hover {
+          color: var(--color-primary);
+          border-bottom-color: var(--color-primary);
+
+          &:before {
+            transform: translateY(calc(100% - 4px));
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(100%);
+      z-index: -1;
+
+      // If the device has :hover.
+      @media (hover: hover) {
+        & {
+          transition: transform $transition-base;
+        }
+      }
+    }
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      & {
+        width: $radio-width;
+      }
+    }
+  }
+
+  // If the button is selected.
+  input:checked + .ah-radio-btn__label {
+    color: var(--color-white);
+
+    &:before {
+      transform: translateY(0);
+    }
+  }
+}

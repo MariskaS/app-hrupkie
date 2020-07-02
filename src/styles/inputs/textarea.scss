@@ -1,0 +1,14 @@
+/**
+* Example:
+* <div class="ah-textarea">
+*    <textarea placeholder="Ваш коментарий"></textarea>
+* </div>
+*/
+.ah-textarea {
+  @include input($input-height-base, var(--border-control-grey), var(--color-primary), var(--color-primary));
+
+  textarea {
+    min-height: $input-height-base;
+    max-height: 200px;
+  }
+}

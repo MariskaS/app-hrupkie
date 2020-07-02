@@ -1,0 +1,86 @@
+@import "~src/styles/mixins/mixin-link-variant";
+@import "~src/styles/mixins/mixin-flex";
+@import "~src/styles/mixins/mixin-container";
+
+$color-link: #fff;
+
+.ah-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-color);
+  font-size: $footer-font-size;
+  font-family: $footer-font;
+  padding: $footer-space;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      padding: $footer-space-sm;
+    }
+  }
+}
+
+.ah-link {
+  @include link-variant($color-link);
+}
+
+a {
+  color: var(--footer-color);
+}
+
+// Socials Block.
+.ah-soc {
+  margin: 0 #{-$space-base-half};
+  display: flex;
+
+  a {
+    padding: $space-base-half;
+  }
+
+  // Socials SVG.
+  &__svg {
+    display: block;
+    fill: $ico-soc-color;
+    width: $ico-soc-size;
+
+    // If the device has :hover.
+    @media (hover: hover) {
+      & {
+        transition: color $transition-base;
+
+        &:hover {
+          fill: var(--color-red-light);
+        }
+      }
+    }
+  }
+}
+
+// Thanks Block.
+.ah-thanks {
+  padding-top: $space-base-half;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// Contacts Block.
+.ah-contacts {
+  @include container($screen-md);
+
+  &__item {
+    li:not(:last-child) {
+      margin-bottom: $space-small;
+    }
+  }
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sm) {
+    & {
+      display: flex;
+      align-items: center;
+
+      &__item:not(:last-child) {
+        padding-right: $space-base;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/**
+* Example:
+* <div class="ah-input ah-input--invalid">
+*     <input placeholder="..."
+*           type="text">
+*    <div class="ah-input__hint">...</div>
+*  </div>
+*/
+.ah-input {
+  @include input($input-height-base, var(--border-control-grey), var(--color-primary), var(--color-primary));
+  @include input-validate(var(--color-red), var(--color-red));
+}
+
+

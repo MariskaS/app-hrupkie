@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app-hrupkie:build"
+            "browserTarget": "app-hrupkie:build",
+            "port": 4202
           },
           "configurations": {
             "production": {
