@@ -1,0 +1,84 @@
+@import '~src/styles/variables/variable';
+
+:host.ah-btn--animate {
+  min-width: $btn-size;
+  min-height: $btn-size;
+  background: var(--btn-heart-bg);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px var(--btn-heart-shadow);
+  transition: all $transition-base;
+  outline: none;
+  user-select: none;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  z-index: $z-index-swiper-btn;
+
+  .ah-btn__ico {
+    svg {
+      fill: var(--btn-heart-ico);
+      height: $btn-heart-ico-size;
+      width: $btn-heart-ico-size;
+    }
+  }
+
+  &::before {
+    content: '';
+    border-radius: 50%;
+    min-width: $btn-size + 18px;
+    min-height: $btn-size + 18px;
+    border: var(--btn-heart-border);
+    box-shadow: 0 0 60px var(--btn-heart-shadow);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all $transition-base;
+  }
+
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: var(--btn-heart-border);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+
+  .is-active,
+  &:hover,
+  &:focus {
+    transform: translateY(-6px);
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      animation: none;
+      display: none;
+    }
+  }
+}
+
+
+@keyframes ring {
+  0% {
+    width: $btn-heart-ico-size;
+    height: $btn-heart-ico-size;
+    opacity: 1;
+  }
+  100% {
+    width: $btn-heart-ico-size * 8;
+    height: $btn-heart-ico-size * 8;
+    opacity: 0;
+  }
+}

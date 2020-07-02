@@ -1,13 +1,13 @@
 @import "../variables/variable";
 
-@mixin link-variant($color) {
+@mixin link-variant($color, $color-border) {
   color: $color;
-  border-bottom: 1px solid rgba($color,.2);
+  border-bottom: 1px solid rgba($color-border,.2);
 
   // If the device has :hover.
   @media (hover: hover) {
     &:hover {
-      border-bottom-color: $color;
+      border-bottom-color: $color-border;
       transition: border-bottom-color $transition-base;
     }
   }

@@ -53,7 +53,7 @@ export const DONATION_CONTENT = {
     subtitle: "мы искренне благодарим вас за неравнодушие!",
     button: "Повторить платеж"
   }
-}
+};
 
 export const SOCIALS_CONTENT = [
   {icon: 'facebook', link: 'https://www.facebook.com/hrupkie.fond'},
@@ -63,17 +63,14 @@ export const SOCIALS_CONTENT = [
 
 export const FOOTER_CONTENT = {
   contacts: {
-    phone: "+7-903-590-04-00",
-    email: "info@hrupkie.ru",
-    mainSite: "help.hrupkie",
-    directToMainSite: "Перейти на основной сайт"
+    phone: '+7-903-590-04-00',
+    email: 'info@hrupkie.ru',
+    mainSite: 'help.hrupkie',
+    directToMainSite: 'Перейти на основной сайт'
   },
   addresses: {
-    legal: "Юридический адрес: 127051, г. Москва, Цветной Бульвар, д. 2",
-    physical: "Физический адрес: 125284, г. Москва, 1-й Боткинский пр-д, д. 7с1",
-    mailing: "Почтовый адрес: 143090, МО, г. Краснознаменск, ул. Победы, д. 15, кв.11"
+    legal: 'Юридический адрес: 127051, г. Москва, Цветной Бульвар, д. 2',
+    physical: 'Физический адрес: 125284, г. Москва, 1-й Боткинский пр-д, д. 7с1',
+    mailing: 'Почтовый адрес: 143090, МО, г. Краснознаменск, ул. Победы, д. 15, кв.11'
   },
-  thanks: {
-    title: "спасибо за помощь в разработке и дизайне сайта:"
-  }
-}
+};

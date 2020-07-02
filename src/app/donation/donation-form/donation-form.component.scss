@@ -1,10 +1,8 @@
 @import '~src/styles/variables/variable';
-@import "~src/styles/mixins/mixin-flex";
+@import "~src/styles/mixins/mixin-flex-variant";
 @import '~src/styles/inputs/mixin-input';
 @import '~src/styles/inputs/mixin-input-validate';
 @import "~src/styles/mixins/mixin-hint-variant";
-
-@import "~src/styles/buttons/button-primary";
 
 @import "~src/styles/inputs/input";
 @import "~src/styles/inputs/input-with-icon";
@@ -13,6 +11,12 @@
 @import "~src/styles/inputs/checkbox";
 
 
+.ah-title {
+  font-family: $font-family-bold;
+  text-transform: uppercase;
+  font-size: $font-size-body;
+}
+
 .ah-svg-rub {
   width: $ico-rub-size;
   margin: $ico-rub-space;
@@ -20,7 +24,7 @@
 
 // Sum.
 .ah-sum {
-  font-size: $font-form-h3;
+  font-size: $font-size-md;
   text-align: center;
   position: relative;
 
@@ -29,7 +33,7 @@
   }
 
   &__hint {
-    @include hint-variant(var(--color-red), $font-roboto-reg, $font-small);
+    @include hint-variant(var(--color-red), $font-family-roboto, $font-size-sm);
     position: absolute;
     top: 100%;
     margin: $space-base-half 0 0 $space-base;
@@ -38,11 +42,11 @@
   // For Desktop & Tablet.
   @media (min-width: $screen-sx) {
     & {
-      @include flex-align(inline-flex, flex-start, center);
+      @include flex-variant(inline-flex, flex-start, center);
       flex-wrap: wrap;
 
       &__switcher {
-        @include flex-align(inline-flex, flex-start, center);
+        @include flex-variant(inline-flex, flex-start, center);
         flex-wrap: wrap;
       }
     }

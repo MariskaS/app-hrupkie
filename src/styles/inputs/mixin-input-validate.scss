@@ -9,7 +9,7 @@
   }
 
   &__hint {
-    @include hint-variant($text-color, $font-roboto-reg, $font-small);
+    @include hint-variant($text-color, $font-family-roboto, $font-size-sm);
     padding-top: $space-small;
     position: absolute;
     top: 100%;

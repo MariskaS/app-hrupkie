@@ -34,8 +34,8 @@
   label {
     padding: 0 0 0 $checkbox-size + $space-small;
     cursor: pointer;
-    font-size: $font-small;
-    font-family: $font-roboto-reg;
+    font-size: $font-size-sm;
+    font-family: $font-family-roboto;
     color: var(--color-grey);
 
     &:before {

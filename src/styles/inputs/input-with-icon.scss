@@ -10,7 +10,7 @@
 */
 .ah-input-with-icon {
   background-color: $input-with-icon-bg;
-  @include flex-align(flex, center, center);
+  @include flex-variant(flex, center, center);
 
   input {
     border: 0;

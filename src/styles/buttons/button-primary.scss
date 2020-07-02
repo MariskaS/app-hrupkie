@@ -1,7 +1,7 @@
-@import "mixin-button-size";
-@import "mixin-button-variant";
+@import 'mixin-button-size';
+@import 'mixin-button-variant';
 
-.ah-btn--primary {
-  @include button-size($btn-size-big, $btn-spaces-big, $btn-font-big);
+:host.ah-btn--primary {
+  @include button-size($btn-size, $btn-spaces, $btn-font);
   @include button-variant(var(--color-primary), var(--color-primary-dark), var(--color-white))
 }

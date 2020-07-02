@@ -1,0 +1,65 @@
+@import '~src/styles/variables/variable';
+
+:host {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  z-index: $z-index-sidebar;
+}
+
+.ah-sidebar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--sidebar-bg);
+  border-left: 2px solid var(--sidebar-border);
+  max-width: $sidebar-width;
+
+  &__head,
+  &__body,
+  &__footer {
+    padding: $space-base;
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sm) {
+      & {
+        padding: $sidebar-spaces;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--sidebar-border);
+  }
+
+  ::ng-deep h3 {
+    font-family: $sidebar-title-font-family;
+    text-transform: uppercase;
+    flex: 1;
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      & {
+        font-size: $sidebar-title-font-size;
+      }
+    }
+  }
+
+  &__body {
+    flex: 1;
+    overflow-x: auto;
+  }
+
+  &__footer {
+    font-family: $sidebar-footer-font-family;
+    font-size: $sidebar-footer-font-size;
+    border-top: 1px solid var(--sidebar-border);
+  }
+
+}
+

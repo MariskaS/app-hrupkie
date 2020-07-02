@@ -1,9 +1,8 @@
-@import "~src/styles/buttons/button-primary";
-@import "~src/styles/mixins/mixin-response-font";
+@import "~src/styles/variables/variable";
 
 .ah-h2,
 .ah-h3 {
-  font-family: $font-akrobat-bold;
+  font-family: $font-family-bold;
   text-transform: uppercase;
 }
 

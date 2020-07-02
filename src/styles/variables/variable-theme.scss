@@ -1,31 +1,55 @@
 :root {
   --color-primary: #0d62b1;
+  --color-primary-rgba: 13, 98, 177;
   --color-primary-dark: #042c52;
 
   --color-peach: #f1e2d2;
-  --color-base: var(--color-primary-dark);
+  --color-peach-dark: #eadac8;
 
   --color-grey: #949494;
   --color-grey-light: #c6ced3;
 
   --color-white: #ffffff;
-  --color-black: #222222;
 
   --color-red: #e12b2b;
   --color-red-light: #f65b47;
+  --color-red-lighter: #ffa095;
+  --color-red-lighter-rgba: 255,160,149;
 
-  // Controls (Use in inputs).
+  /*
+  * Body.
+  */
+  --body-bg: var(--color-peach);
+  --body-color: var(--color-primary-dark);
+
+  /*
+  * Controls (Use in inputs).
+  */
   --border-control-grey: solid 1px var(--color-grey-light);
 
-  // Swiper.
+  /*
+  * Swiper.
+  */
   --swiper-theme-color: var(--color-primary);
 
-  // Footer.
-  --footer-bg: var(--color-primary);
-  --footer-color: var(--color-white);
-
-  // Scrollbar.
+  /*
+  * Scrollbar.
+  */
   --color-scrollbar: var(--color-primary);
+
+  /*
+  * Buttons.
+  */
+  --btn-heart-bg: var(--color-red-lighter);
+  --btn-heart-ico: var(--color-red);
+  --btn-heart-border: 4px solid var(--color-red-light);
+  --btn-heart-shadow: rgba(var(--color-red-lighter-rgba),.64);
+
+  /*
+  * Sidebar.
+  */
+  --sidebar-bg: var(--body-bg);
+  --sidebar-border: var(--color-peach-dark);
 }
 
 

@@ -1,15 +1,10 @@
 import {Component} from '@angular/core';
 
-import {DONATION_CONTENT} from '../content';
-
 @Component({
   selector: 'app-donation',
-  templateUrl: './donation.component.html',
-  styleUrls: ['./donation.component.scss']
+  templateUrl: './donation.component.html'
 })
 export class DonationComponent {
-  donationText = DONATION_CONTENT;
-
   isSuccessfulPayment: boolean;
 
   successfulPaymentNotify($event: boolean): void {

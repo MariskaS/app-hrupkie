@@ -12,10 +12,21 @@
 }
 
 body {
-  font-family: $font-akrobat-reg;
-  font-size: $font-base;
-  color: var(--color-base);
+  font-family: $font-family-reg;
+  font-size: $font-size-body;
+  color: var(--body-color);
   overflow-x: hidden;
   line-height: 1.1;
-  background-color: var(--color-peach);
+  background-color: var(--body-bg);
+}
+
+[disabled] {
+  opacity: .5;
+  cursor: default;
+  pointer-events: none;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
 }

@@ -1,30 +1,7 @@
 @import "~src/styles/mixins/mixin-link-variant";
-@import "~src/styles/mixins/mixin-flex";
-@import "~src/styles/mixins/mixin-container";
-
-$color-link: #fff;
-
-.ah-footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-color);
-  font-size: $footer-font-size;
-  font-family: $footer-font;
-  padding: $footer-space;
-
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sm) {
-    & {
-      padding: $footer-space-sm;
-    }
-  }
-}
 
 .ah-link {
-  @include link-variant($color-link);
-}
-
-a {
-  color: var(--footer-color);
+  @include link-variant(var(--color-primary), var(--color-primary-rgba));
 }
 
 // Socials Block.
@@ -39,7 +16,6 @@ a {
   // Socials SVG.
   &__svg {
     display: block;
-    fill: $ico-soc-color;
     width: $ico-soc-size;
 
     // If the device has :hover.
@@ -48,38 +24,37 @@ a {
         transition: color $transition-base;
 
         &:hover {
-          fill: var(--color-red-light);
+          fill: var(--color-primary);
         }
       }
     }
   }
 }
 
-// Thanks Block.
-.ah-thanks {
-  padding-top: $space-base-half;
-  font-weight: 500;
-  text-transform: uppercase;
-}
+.ah-footer {
+  padding-bottom: 40px; // Because of socials plugin.
 
-// Contacts Block.
-.ah-contacts {
-  @include container($screen-md);
-
-  &__item {
+  &__col {
     li:not(:last-child) {
       margin-bottom: $space-small;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: $space-base;
     }
   }
 
   // For Desktop & Tablet.
   @media (min-width: $screen-sm) {
     & {
-      display: flex;
-      align-items: center;
+      padding-bottom: 0; // Because of socials plugin.
 
-      &__item:not(:last-child) {
+      display: flex;
+      justify-content: space-between;
+
+      &__col:not(:last-child) {
         padding-right: $space-base;
+        padding-bottom: 0;
       }
     }
   }

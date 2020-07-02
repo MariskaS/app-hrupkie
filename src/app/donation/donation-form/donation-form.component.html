@@ -1,6 +1,6 @@
 <form [formGroup]="donateForm"
       (ngSubmit)="onSubmit()">
-  <p class="ah-h4">{{formText.title}}</p>
+  <h4 class="ah-title">{{formText.title}}</h4>
 
   <!--Sum-->
   <div class="ah-sum">
@@ -19,7 +19,7 @@
         </label>
       </ng-container>
     </div>
-    <span class="ah-h4">{{formText.or}}</span>
+    <span class="ah-title">{{formText.or}}</span>
     <div class="ah-input-with-icon">
       <input type="number"
              formControlName="sumInputValue"
@@ -98,7 +98,7 @@
     </div>
   </div>
 
-  <button class="ah-btn--primary"
+  <button app-button
           type="submit"
           [disabled]="donateForm.invalid || donateForm.disabled || (!donateForm.get('sumRadioValue').value && !donateForm.get('sumInputValue').value)">
     {{formText.submitButton}}

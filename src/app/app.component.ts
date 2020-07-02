@@ -1,6 +1,10 @@
-import {Component} from '@angular/core';
-import {SwiperOptions} from "swiper";
-import {SLIDER_CONTENT} from "./content";
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {select, Store} from '@ngrx/store';
+import {SidebarState} from './interfaces';
+import {selectSidebarOpen} from './store/sidebar/sidebar.selectors';
+import {SidebarCloseAction, SidebarToggleAction} from './store/sidebar/sidebar.actions';
+import {DONATION_CONTENT} from './content';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +12,23 @@ import {SLIDER_CONTENT} from "./content";
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
-  slideData = SLIDER_CONTENT;
+export class AppComponent implements OnInit {
+  donationContent = DONATION_CONTENT;
 
-  config: SwiperOptions = {
-    direction: 'vertical',
-    pagination: {el: '.swiper-pagination', clickable: true},
-    autoHeight: true,
-    allowTouchMove: true,
-    speed: 600,
-    parallax:true,
-  };
+  public open$: Observable<boolean>;
+
+  constructor(private store$: Store<SidebarState>) {
+  }
+
+  ngOnInit(): void {
+    this.open$ = this.store$.pipe(select(selectSidebarOpen));
+  }
+
+  toggleSidebar(): void {
+    this.store$.dispatch(new SidebarToggleAction());
+  }
+
+  closeSidebar(): void {
+    this.store$.dispatch(new SidebarCloseAction());
+  }
 }

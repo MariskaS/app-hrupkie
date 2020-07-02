@@ -1,0 +1,18 @@
+@import "~src/styles/mixins/mixin-flex-variant";
+@import "~src/styles/mixins/mixin-focus-variant";
+
+:host.ah-btn--icon {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: unset;
+  color: currentColor;
+  @include flex-variant(inline-flex, center, center);
+  @include focus-variant;
+
+  .ah-btn__ico {
+    svg {
+      color: currentColor;
+    }
+  }
+}

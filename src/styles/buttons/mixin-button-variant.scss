@@ -1,5 +1,5 @@
-@import "../variables/variable";
-@import "../mixins/mixin-flex";
+@import "~src/styles/variables/variable";
+@import "~src/styles/mixins/mixin-flex-variant";
 
 @mixin button-variant($background, $hover-background, $color) {
   color: $color;
@@ -9,7 +9,7 @@
   white-space: nowrap;
   text-transform: uppercase;
   user-select: none;
-  @include flex-align(inline-flex, center, center);
+  @include flex-variant(inline-flex, center, center);
 
   &:not(:disabled) {
     &:active {
@@ -29,9 +29,7 @@
     }
   }
 
-
-  &:disabled {
-    background: var(--color-grey);
-    cursor: default;
+  svg {
+    fill: currentColor;
   }
 }
