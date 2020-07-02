@@ -4,8 +4,7 @@
 The promotional site for a [Russian charity](https://hrupkie.ru/)    
 
 **Technologies:** 
-[Angular CLI](https://github.com/angular/angular-cli) version 10.0.0, HTML/Scss, 
-Typescript, HTML/Scss, JavaScript.  
+[Angular CLI](https://github.com/angular/angular-cli) version 10.0.0, Typescript, HTML/Scss, JavaScript.  
 
 **Additional packages:** [ngx-useful-swiper](https://github.com/jaychase/angular2-useful-swiper)
 

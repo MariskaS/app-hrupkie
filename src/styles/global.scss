@@ -1,3 +1,5 @@
+@import '~src/styles/mixins/mixin-focus-variant';
+
 ::-webkit-scrollbar {
   width: $scrollbar-size;
   height: $scrollbar-size;
@@ -15,7 +17,7 @@ body {
   font-family: $font-family-reg;
   font-size: $font-size-body;
   color: var(--body-color);
-  overflow-x: hidden;
+  overflow: hidden;
   line-height: 1.1;
   background-color: var(--body-bg);
 }
@@ -29,4 +31,5 @@ body {
 a {
   color: var(--color-primary);
   text-decoration: none;
+  @include focus-variant;
 }

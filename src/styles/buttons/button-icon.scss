@@ -1,3 +1,4 @@
+@import "~src/styles/variables/variable";
 @import "~src/styles/mixins/mixin-flex-variant";
 @import "~src/styles/mixins/mixin-focus-variant";
 
@@ -13,6 +14,8 @@
   .ah-btn__ico {
     svg {
       color: currentColor;
+      height: $btn-ico-size;
+      width: $btn-ico-size;
     }
   }
 }

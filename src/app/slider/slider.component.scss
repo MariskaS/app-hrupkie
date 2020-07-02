@@ -1,5 +1,6 @@
 @import '~src/styles/variables/variable';
 @import '~src/styles/mixins/mixin-response-font';
+@import '~src/styles/mixins/mixin-focus-variant';
 
 .ah-hash,
 .ah-h1 {
@@ -36,6 +37,7 @@ swiper {
     margin: $swiper-bullet-spaces 0 !important;
     height: $swiper-bullet-size;
     width: $swiper-bullet-size;
+    @include focus-variant;
   }
 }
 
