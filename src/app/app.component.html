@@ -1,6 +1,6 @@
 <app-slider></app-slider>
 
-<app-sidebar *ngIf="open$ | async">
+<app-sidebar *ngIf="isOpenSidebar">
   <ng-container sidebar-head>
     <h3>
       {{donationContent.title}}<br>
@@ -27,7 +27,7 @@
         type="button"
         theme="animate"
         (click)="toggleSidebar()"
-        [class.is-active]="open$ | async"
+        [class.is-active]="isOpenSidebar"
         title="Помочь сейчас"
         aria-label="Открыть форму для перевода денег"
         iconName="icon-favorite">
