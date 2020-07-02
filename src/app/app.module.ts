@@ -13,7 +13,7 @@ import {DonationFormComponent} from './donation/donation-form/donation-form.comp
 import {FooterComponent} from './footer/footer.component';
 import {SliderComponent} from './slider/slider.component';
 import {SidebarComponent} from './shared/components/sidebar/sidebar.component';
-import {ButtonComponent} from './shared/button/button.component';
+import {ButtonComponent} from './shared/components/button/button.component';
 
 @NgModule({
   declarations: [

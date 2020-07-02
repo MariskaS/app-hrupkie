@@ -1,6 +1,7 @@
+### [Demo](https://app-hrupkie.herokuapp.com/)
+
 ## Description  
-The promotional site for a [Russian charity](https://hrupkie.ru/) 
-**[Live Demo](https://app-hrupkie.herokuapp.com/)** - here is a build version of the test task. 
+The promotional site for a [Russian charity](https://hrupkie.ru/)    
 
 **Technologies:** 
 [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0, HTML/Scss, 
