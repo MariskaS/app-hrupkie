@@ -17,7 +17,35 @@
 
 .ah-h1 {
   @include response-font($font-h1-response);
-  margin: $space-base 0 $space-base-double;
+  margin: $space-base 0;
+}
+
+// Touch icon.
+.ah-touch-ico {
+  display: none;
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: $space-base-double;
+
+      svg {
+        height: 28px;
+        width: 28px;
+        fill: var(--color-primary-dark)
+      }
+
+      span {
+        margin-left: $space-small;
+        font-family: $font-family-bold;
+        font-size: 18px;
+      }
+    }
+
+  }
 }
 
 /*
